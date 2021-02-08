@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.wrap {width: 100%; }
+.hd { height:100px; }
+.logo {display: block; width: 200px; height:40px; background-image: url("./source/Header/logo.gif"); float:left; margin-top: 30px; }
+
+.gnb { float: right; margin-top: 40px; }
+
+.gnb li { float: left; width: 150px; height: 35px; line-height: 35px;  }
+.gnb li.dp1 a.dp1_a { display: block; width: 100%; height: 35px; line-height: 35px; font-size : 18px; text-align: center; background-color:#fff; color: black; font-weight: 700; border-top:1px solid; box-sizing: border-box; border-bottom: 2px solid #000; }
+.gnb li:first-child a.dp1_a { border-left: 1px solid #000;}
+.gnb li:last-child a.dp1_a {border-right: 1px solid #000;} 
+
+.gnb .sub { opacity:0; visibility: hidden; transition: 0.7s; border-bottom:1px solid #000; height:140px;  }
+.gnb .sub01 { border-left:1px solid #000; }
+.gnb .sub04 { border-right:1px solid #000; }
+.gnb .sub li { clear: both;  width: 150px; }
+
+.gnb .sub li.sub_lst a { display: block; width: 100%; height: 35px; line-height: 35px; font-size : 18px; text-align: center; color: black; font-size: 15px;
+}
+
+.gnb:hover .sub { opacity: 1; visibility:visible;}
+.gnb li.dp1:hover a.dp1_a { background-color: firebrick; color:#fff;}
+.gnb .sub li.sub_lst:hover a { background-color: firebrick; color:#fff;}
+
+/*figure*/
+.vs { overflow: hidden;}
+.vs ul { width: 400%; height: 300px;  }
+.vs .m_banner { width: 33.333%; height: 300px; }
+
+/*main*/
+.content { height: 200px; overflow: hidden;}
+.content .con { float: left; }
+.content .noti {width: 500px; }
+/*button*/
+.btn_box button {display: block; float: left; width: 100px; height:20px; background-color:#fff; border:1px solid #000; border-bottom: none; border-radius: 5px 5px 0px 0px; line-height: 20px; cursor: pointer;  }
+.btn_box .btn.active { color:#fff; background-color: darkred;}
+
+/*table*/
+.tb { display: table; border-collapse: collapse; width:480px; height: 180px; border:1px solid #000; }
+.tb tr { display: table-row;}
+.tb th, .tb td { display: table-cell; height:20px;}
+
+.tb .cel1{ width:100px; text-align: center;  }
+.tb .cel2{ width:280px; }
+.tb .cel3{ width:100px; text-align: center;}
+
+thead .cel2 {text-align: center;}
+tbody .cel2 a { display:block; width:300px; height:20px; overflow: hidden;  white-space: nowrap; text-overflow: ellipsis; color:#000;}
+
+/*banner */
+.content .banner { width:410px; height: 200px; }
+.content .banner img { display: block; width:227px; height:200px; margin: 0 auto;}
+
+/*바로가기*/
+.content .go_St {width:410px; height: 200px;   }
+.go_st a{ display: block; width: 400px; height: 60px; border:1px solid #ddd;  box-sizing: border-box; clear:both; line-height: 60px; margin: 5px 0; text-align: center;}
