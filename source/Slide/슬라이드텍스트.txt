@@ -1,0 +1,37 @@
+첫 번째 이미지
+	제목 : 더~! 더~! 청순해지는 여성을 위한 아이템
+
+두 번째 이미지
+	제목 : 폼 나는 JUST 만의 아우터 아이템
+
+세 번째 이미지
+	제목 : 감각이 돋보이도록~! 쭈~욱 다리는 길게~!
+
+
+/*main*/
+.content { height: 200px; overflow: hidden;}
+.content .con { float: left; }
+.content .noti {width: 500px; }
+/*button*/
+.btn_box button {display: block; float: left; width: 100px; height:20px; background-color:#fff; border:1px solid #000; border-bottom: none; border-radius: 5px 5px 0px 0px; line-height: 20px; cursor: pointer;  }
+.btn_box .btn.active { color:#fff; background-color: darkred;}
+
+/*table*/
+.tb { display: table; border-collapse: collapse; width:480px; height: 180px; border:1px solid #000; }
+.tb tr { display: table-row;}
+.tb th, .tb td { display: table-cell; height:20px;}
+
+.tb .cel1{ width:100px; text-align: center;  }
+.tb .cel2{ width:280px; }
+.tb .cel3{ width:100px; text-align: center;}
+
+thead .cel2 {text-align: center;}
+tbody .cel2 a { display:block; width:300px; height:20px; overflow: hidden;  white-space: nowrap; text-overflow: ellipsis; color:#000;}
+
+/*banner */
+.content .banner { width:410px; height: 200px; }
+.content .banner img { display: block; width:227px; height:200px; margin: 0 auto;}
+
+/*바로가기*/
+.content .go_St {width:410px; height: 200px;   }
+.go_st a{ display: block; width: 400px; height: 60px; border:1px solid #ddd;  box-sizing: border-box; clear:both; line-height: 60px; margin: 5px 0; text-align: center;}
