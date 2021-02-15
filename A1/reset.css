@@ -1,9 +1,0 @@
-@charset "UTF-8";
-* { margin: 0; padding: 0; }
-body,html { width: 100%; font-family:"Nanum","sans-serif","serif"; }
-ul { list-style: none;}
-a { text-decoration: none; }
-input,button,img { user-select:none; background-color:none; border: 0; outline:0; }
-
-.clrfx { width: 1320px; margin: 0 auto; }
-.clrfx:after { content:""; display: block; clear:both; }
