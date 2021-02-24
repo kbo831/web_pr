@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Green복지재단</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="./A2source/Slide/jquery.js"></script>
+    <style>
+        /* 큰 틀에는 clear: both &  float 와 position:absolute, fixed 가 걸린 태그의 상위 태그 clear fixed 처리를 해주자 after 선택자를 이용해서 clear:both  속성을 넣어줘서 패딩효과처럼 사용해 여백을 줌으로써 공간을 확보해줌*/
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <a href="#" class="logo clrfx">
+                <img src="./header/hdlogo.png" alt="로고">
+            </a>
+            <nav class="gnb">
+                <ul class="dp">
+                    <li class="dp1">
+                        <a href="">재단소개</a>
+                        <ul class="sub">
+                            <li><a href="#">설립취지</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="dp1">
+                        <a href="">후원하기</a>
+                        <ul class="sub">
+                            <li><a href="#">국내후원</a></li>
+                            <li><a href="#">국외후원</a></li>
+                            <li><a href="#">맞춤후원</a></li>
+                        </ul>
+                    </li>
+                    <li class="dp1">
+                        <a href="">자료실</a>
+                        <ul class="sub">
+                            <li><a href="#">서식자료실</a></li>
+                            <li><a href="#">사진자료실</a></li>
+                            <li><a href="#">후원양식</a></li>
+                        </ul>
+                    </li>
+                    <li class="dp1">
+                        <a href="">스토리</a>
+                        <ul class="sub">
+                            <li><a href="#">웹진</a></li>
+                            <li><a href="#">보고서</a></li>
+                            <li><a href="#">나의 후원</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="vs_box">
+            <ul class="vs">
+                <li>
+                    <a href="#" class="vs_a">
+                        <img src="./slide/sl1.jpg" alt="저소득 장애아동 지원">
+                        <div class="txt">
+                            <h2 class="tit"> 여보, 우리 민호는 데려가지 말아요..</h2>
+                            <p class="com">언제 찾아올지 모르는 경력과 호흡 곤란을 겪고 있는 민호.<br>
+                                엄마는 민호에게 해주지 못한 것이 아직 많습니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="vs_a">
+                        <img src="./slide/sl2.jpg" alt="해외아동지원캠페인">
+                        <div class="txt">
+                            <h2 class="tit">2019 새해다짐 소액기부 천천히 천 원부터</h2>
+                            <p class="com"> 내 지갑 속 천원을 도움이 필요한
+                                아이들의 삶을 구하는 천원으로 사용해주세요
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="vs_a">
+                        <img src="./slide/sl3.jpg" alt="국내아동 결연캠페인">
+                        <div class="txt">
+                            <h2 class="tit">한 아이의 든든한 후원자가 되어주기 너는 우리의 사랑</h2>
+                            <p class="com">결연을 기다리는 아이가 가까운 곳에 있습니다.<br>
+                                장애와 질병으로 세상과 단절된 아이들의 손을 잡아주세요</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="btn_box">
+                <li><button class="prev">&lt;</button></li>
+                <li><button class="next">&gt;</button></li>
+            </ul>
+            <script>
+                $(document).ready(function() {
+                    function ani1() {
+                        $(".vs").not(":animated").animate({
+                            "margin-left": "-1200px"
+                        }, 500, function() {
+                            $(".vs li").eq(0).appendTo($(".vs"));
+                            $(".vs").css("margin-left", "0px");
+                        });
+                    }
+                    var ivt = setInterval(function() {
+                        ani1();
+                    }, 2500);
+
+                    function ani2() {
+                        $(".vs li").eq(2).prependTo($(".vs"));
+                        $(".vs").css("margin-left", "-1200px");
+                        $(".vs").not(":animated").animate({
+                            "margin-left": "0px"
+                        }, 500);
+                    }
+                    $(".btn_box .prev").click(function() {
+                        clearInterval(ivt);
+                        ani2();
+                        ivt = setInterval(function() {
+                            ani1();
+                        }, 2500);
+                    });
+                    $(".btn_box .next").click(function() {
+                        clearInterval(ivt);
+                        ani1();
+                        ivt = setInterval(function() {
+                            ani1();
+                        }, 2500);
+                    });
+
+                });
+            </script>
+        </div>
+        <div class="con clrfx">
+            <div class="noti clrfx">
+                <div class="noti1">
+                    <h3>공지사항</h3>
+                    <table class="tb">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="cel2"><a href="javascript:;">장애청소년 운동선수 지원사업 '점프' 1차 대상자 선정</a></td>
+                                <td>2019-02-12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="#">온라인 재능기부 캠페인 '밀알 프렌즈' 모집(~2/28)</a></td>
+                                <td>2019-02-11</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="#">2018 연말정산 기부금영수증 발급 안내 </a></td>
+                                <td>2019-02-10</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="#"> MBC 장애인식개선 프로젝트&lt;우리동네 피터팬&gt;방송 안내 </a></td>
+                                <td>2019-02-09</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        $(".noti1 tbody tr:first-child .cel2 a").click(function() {
+                            $(".pop").fadeIn();
+                        });
+                        $("button.cl_btn").click(function() {
+                            $("#pop1").fadeOut();
+                        });
+                    });
+                </script>
+                <div class="noti2">
+                    <h3>갤러리</h3>
+                    <a href="#" class="img"><img src="./content/gal1.jpg" alt="갤러리1"></a>
+                    <a href="#" class="img"><img src="./content/gal2.jpg" alt="갤러리2"></a>
+                    <a href="#" class="img"><img src="./content/gal3.jpg" alt="갤러리3"></a>
+                </div>
+                <section class="banner">
+                    <h3>배너</h3>
+                    <a href="">
+                        <img src="./content/banner01.jpg" alt="배너1">
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <footer class="ft clrfx">
+            <div class="ft_wrap">
+                <img src="./footer/ftlogo.png" alt="하단로고" class="ft_logo">
+                <p class="copy">COPYRIGHTⓒ 2018 Green Welfare Foundation ALL RIGHTS RESERVED.</p>
+                <ul class="collbox ">
+                   <input type="checkbox" class="ck" id="ck">
+                    <li class="lst">
+                        <label for="ck">법인사무처</label>
+                        <ul class="sub">
+                            <li><a href="">경기지부</a></li>
+                            <li><a href="">경남지부</a></li>
+                            <li><a href="">경북지부</a></li>
+                            <li><a href="">대전지부</a></li>
+                            <li><a href="">충남지부</a></li>
+                            <li><a href="">충북지부</a></li>
+                            <li><a href="">부산지부</a></li>
+                            <li><a href="">인천지부</a></li>
+                            <li><a href="">전남지부</a></li>
+                            <li><a href="">전북지부</a></li>
+                            <li><a href="">제주지부</a></li>
+                            <li><a href="">강원지부</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </footer>
+        <div class="pop clrfx" id="pop1">
+
+            <h3 class="tit">장애청소년 운동선수 지원사업 '점프' 1차 대상자 선정</h3>
+            <p class="com">밀알복지재단에서는 KB국민카드, 신용카드사회공헌재단과 함께 장애청소년 운동선수 지원사업 '점프'를 실시하고 있습니다.
+                신청에 많은 관심을 가져주신 여러분께 감사드리며, 1차 서류심사 결과를 아래와 같이 발표합니다.</p>
+            <table class="tb">
+                <thead>
+                    <tr>
+                        <th class="cel1">분야</th>
+                        <th class="cel2">이름</th>
+                        <th class="cel3">종목</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cel1">개인</td>
+                        <td class="cel2">김*영</td>
+                        <td class="cel3">육상/쇼트트랙</td>
+                    </tr>
+                    <tr>
+                        <td class="cel1">개인</td>
+                        <td class="cel2">김*</td>
+                        <td class="cel3">역도</td>
+                    </tr>
+                    <tr>
+                        <td class="cel1">개인</td>
+                        <td class="cel2">김*준</td>
+                        <td class="cel3">던지기</td>
+                    </tr>
+                    <tr>
+                        <td class="cel1">개인</td>
+                        <td class="cel2">김*찬</td>
+                        <td class="cel3">수영</td>
+                    </tr>
+                    <tr>
+                        <td class="cel1">개인</td>
+                        <td class="cel2">염*빈</td>
+                        <td class="cel3">수영</td>
+                    </tr>
+                    <tr>
+                        <td class="cel1">개인</td>
+                        <td class="cel2">김*희</td>
+                        <td class="cel3">조정</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="cl_btn">닫기</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
